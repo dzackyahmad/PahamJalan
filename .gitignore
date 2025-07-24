@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# LangChain vectorstore
+db/
+
+# Pycache
+__pycache__/
+
+# Logs
+*.log

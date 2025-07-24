@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>PahamJalan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h1>PahamJalan</h1>
+    <ul>
+      <li onclick="newChat()">New Chat</li>
+      <li><a href="https://peraturan.bpk.go.id/Jenis" target="_blank">Explore PDFs</a></li>
+      <li onclick="showAbout()">About Us</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div id="chat-container" class="chat-container"></div>
+    <div class="input-container">
+      <input type="text" id="question" placeholder="Tanyakan peraturan hukum di Indonesia..." />
+      <button onclick="send()">Send</button>
+    </div>
+  </div>
+
+  <!-- About Us Modal -->
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAbout()">&times;</span>
+      <h2>Tentang PahamJalan</h2>
+      <p><strong>PahamJalan</strong> adalah chatbot hukum lalu lintas yang dirancang untuk membantu masyarakat memahami peraturan lalu lintas di Indonesia, berdasarkan UU No. 22 Tahun 2009 dan peraturan terkait.</p>
+      <p>Tujuan kami adalah menyederhanakan akses terhadap informasi hukum yang sering kali sulit dipahami.</p>
+      <p><strong>Tim Pengembang:</strong></p>
+      <ul>
+        <li>Hafizh Fadhl Muhammad</li>
+        <li>Dzacky Ahmad</li>
+        <li>Farhan Zia Rizky</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
