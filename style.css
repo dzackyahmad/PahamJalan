@@ -1,3 +1,4 @@
+/* Reset dan dasar */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,11 +7,13 @@ body {
   overflow: hidden;
 }
 
+/* Sidebar */
 .sidebar {
   background: linear-gradient(to bottom, #a71d2a, #f6a0a0);
   width: 250px;
   color: white;
   padding: 20px;
+  flex-shrink: 0;
 }
 
 .sidebar h1 {
@@ -35,6 +38,7 @@ body {
   text-decoration: underline;
 }
 
+/* Area utama */
 .main {
   flex: 1;
   display: flex;
@@ -43,14 +47,17 @@ body {
   position: relative;
 }
 
+/* Chat */
 .chat-container {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
+/* Chat bubble */
 .chat-message {
   display: flex;
   align-items: flex-end;
@@ -68,6 +75,7 @@ body {
   flex-direction: row-reverse;
 }
 
+/* Avatar */
 .avatar {
   width: 32px;
   height: 32px;
@@ -76,6 +84,7 @@ body {
   object-fit: cover;
 }
 
+/* Bubble */
 .bubble {
   padding: 12px 16px;
   border-radius: 18px;
@@ -95,10 +104,12 @@ body {
   border-bottom-right-radius: 4px;
 }
 
+/* Input */
 .input-container {
   display: flex;
   padding: 10px;
   border-top: 1px solid #ccc;
+  background: #fff;
 }
 
 #question {
@@ -125,15 +136,7 @@ button:hover {
   background: #a71d2a;
 }
 
-
-img.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  margin: 0 10px;
-  object-fit: cover;
-}
-
+/* Modal (About Us) */
 .modal {
   display: none;
   position: fixed;
@@ -150,7 +153,8 @@ img.avatar {
   background: white;
   margin: auto;
   padding: 20px;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   border-radius: 10px;
 }
 
@@ -158,4 +162,36 @@ img.avatar {
   float: right;
   font-size: 24px;
   cursor: pointer;
+}
+
+/* Loading... */
+#loading {
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .bubble {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  #question {
+    font-size: 14px;
+  }
 }
