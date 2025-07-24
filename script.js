@@ -32,7 +32,7 @@ async function send() {
   const loadingBubble = allBubbles[allBubbles.length - 1];
 
   try {
-    const res = await fetch("http://localhost:8000/ask", {
+    const res = await fetch("https://2c85b5528834.ngrok-free.app/ask", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ question }),
